@@ -1,0 +1,42 @@
+int main()
+{
+int cantidad;
+cout << "Introduce la cantidad de objetos: ";
+cin >> cantidad;
+
+   // Asignación de memoria dinámica para arrays de objetos
+gorriti* objeto_gorriti = new gorriti[cantidad];
+precio* objeto_precio = new precio[cantidad];
+quinta* objeto_quinta = new quinta[cantidad];
+
+    //////////me carga la cantidad de casas/////////////
+    for(int i=0; i<cantidad; i++)
+    {
+
+        objeto_gorriti[i]=cargar_inmuebles();
+        objeto_precio[i]=cargar_precio();
+        cout<<"________________________________"<<endl;
+        objeto_quinta[i]=cargar_quinta();
+
+    }
+
+////////me muestra la cantidad de casas//////////////
+
+    for(int i=0; i<cantidad; i++)
+    {
+
+        mostrar(objeto_gorriti[i]);
+        mostrar_precio(objeto_precio[i]);
+
+        cout<<"______________________________"<<endl;
+
+        mostar_quinta(objeto_quinta[i]);
+
+
+    }
+// Al finalizar, debes liberar la memoria asignada
+delete[] objeto_gorriti;
+delete[] objeto_precio;
+delete[] objeto_quinta;
+    return 0;
+}
