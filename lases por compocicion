@@ -1,0 +1,61 @@
+quinta  cargar_quinta()
+{
+    bool pileta;
+    bool quincho;
+    float precio_venta,precio_alquiler;
+
+    int codigo;
+    std::string calles;
+    std:: string numero;
+    std::string localidad;
+    int antiguedad;
+    float superficie_total;
+    float superficie_cubierta;
+    int habitaciones;
+    cout<<"quinta"<<endl;
+
+    cout<<endl;
+    cout<<"codigo"<<endl;
+    cin>>codigo;
+    cout<<"calle:"<<endl;
+    cin>>calles;
+    cout<<"localidad"<<endl;
+    cin>>localidad;
+    cout<<"antiguedad"<<endl;
+    cin>>antiguedad;
+    cout<<"superficie"<<endl;
+    cin>>superficie_total;
+    cout<<"superficie cubierta"<<endl;
+    cin>>superficie_cubierta;
+    cout<<"habitaciones"<<endl;
+    cin>>habitaciones;
+
+    cout<<"precio venta"<<endl;
+    cin>>precio_venta;
+    cout<<"precio alquilerin"<<endl;
+    cin>>precio_alquiler;
+
+
+
+    cout<<"tiene pileta"<<endl;
+    cin>>pileta;
+    cout<<"tiene quincho"<<endl;
+    cin>>quincho;
+////aca hice una clase precio dentro de la funcion cargar quinta que heredo casa
+
+    precio p(precio_venta,precio_alquiler);
+    return quinta (codigo,calles,numero,localidad,antiguedad,superficie_total,superficie_cubierta,habitaciones,pileta,quincho,p);
+///////////////////////////////////////////////////////////////////
+class quinta: public gorriti
+{
+
+public:
+    bool _pileta;
+    bool _quincho;
+    precio _precio;
+
+public:
+
+    quinta();
+
+quinta (int,std::string calles,std::string numeros,std:: string localidad,int,float,float,int,bool,bool,precio _precio);
